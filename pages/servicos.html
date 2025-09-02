@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Serviços — Cognisum</title>
+  <meta name="description" content="Dashboards, análises e relatórios executivos — dados integrados e visualizados para decisões seguras." />
   <link rel="icon" type="image/png" href="../public/logo-semfundo1.png" />
   <!-- CSS -->
   <link rel="stylesheet" href="../css/variables.css" />
@@ -13,14 +14,14 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container navbar">
       <a href="../index.html" class="brand" aria-label="Página inicial da Cognisum">
-        <img src="../assets/logos/logo-cognisum-lateral-cortada.png" alt="Cognisum" />
+        <img src="../assets/logos/logo-cognisum-sem-textura.png" alt="Cognisum" />
       </a>
       <nav>
         <a href="sobre.html">Sobre</a>
-        <a href="servicos.html">Serviços</a>
+        <a class="is-active" href="servicos.html" aria-current="page">Serviços</a>
         <a href="cases.html">Cases</a>
         <a href="blog.html">Blog</a>
         <a class="btn btn-primary" href="contato.html">Contato</a>
@@ -29,316 +30,433 @@
   </header>
 
   <!-- MAIN -->
-<main class="container" style="padding:32px 0">
-  <!-- HERO -->
-  <section class="services-hero" aria-labelledby="servicos-title">
-    <div>
-      <h1 id="servicos-title">Serviços</h1>
-      <p class="lead">
-        Dados integrados e visualizados para decidir com confiança. Painéis vivos, análises preditivas e relatórios
-        que conectam diagnóstico a ação — sem jargões.
-      </p>
-      <ul class="chips" aria-label="Diferenciais">
-        <li>Atualização contínua</li>
-        <li>Comparabilidade territorial</li>
-        <li>Transparência de fontes</li>
-        <li>Implantação rápida</li>
-      </ul>
-    </div>
-    <div>
-      <!-- opcional: mini ilustração ou print; pode deixar vazio -->
-    </div>
-  </section>
-
-  <!-- CARDS DE SERVIÇOS (sumário) -->
-  <section class="service-grid" aria-label="Resumo dos serviços">
-    <!-- Dashboards -->
-    <article class="service-card">
-      <div class="service-card__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3Zm10 0h8v5h-8V3ZM3 13h8v8H3v-8Zm10 7v-9h8v9h-8Z"/></svg>
-      </div>
-      <h3>Dashboards</h3>
-      <p>Indicadores confiáveis, comparáveis e atualizados — prontos para decisão.</p>
-      <ul class="icon-bullets">
-        <li>KPIs por território e período</li>
-        <li>Alertas e variações relevantes</li>
-        <li>Exportação para apresentações</li>
-      </ul>
-      <a class="btn btn-outline" href="#dashboards">Saiba mais</a>
-    </article>
-
-    <!-- Análises -->
-    <article class="service-card">
-      <div class="service-card__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M3 21V3h2v16h16v2H3Zm4-4V9h2v8H7Zm4 0V5h2v12h-2Zm4 0v-6h2v6h-2Z"/></svg>
-      </div>
-      <h3>Análises</h3>
-      <p>Séries temporais, projeções e benchmarks por território e setor.</p>
-      <ul class="icon-bullets">
-        <li>Modelos preditivos e cenários</li>
-        <li>Comparativos com pares</li>
-        <li>Insights explicáveis</li>
-      </ul>
-      <a class="btn btn-outline" href="#analises">Ver exemplos</a>
-    </article>
-
-    <!-- Relatórios -->
-    <article class="service-card">
-      <div class="service-card__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V7h3.5L14 3.5ZM8 9h8v2H8V9Zm0 4h8v2H8v-2Zm0 4h5v2H8v-2Z"/></svg>
-      </div>
-      <h3>Relatórios</h3>
-      <p>Narrativa clara, achados e recomendações aplicáveis.</p>
-      <ul class="icon-bullets">
-        <li>Executivo + técnico</li>
-        <li>Planos de ação priorizados</li>
-        <li>Material pronto para comitês</li>
-      </ul>
-      <a class="btn btn-outline" href="#relatorios">Ver entregas</a>
-    </article>
-  </section>
-
-  <!-- DETALHES POR SERVIÇO (com âncoras) -->
-  <section id="dashboards" class="service-section" aria-labelledby="dashboards-title">
-    <h2 id="dashboards-title">Dashboards</h2>
-    <div class="section-cards">
-      <div class="section-card">
-        <h3>O que você recebe</h3>
-        <ul class="icon-bullets">
-          <li>KPIs prioritários com filtros por território, período e setor.</li>
-          <li>Visuais padronizados e exportáveis (PDF/PNG).</li>
-          <li>Usuários e perfis de acesso (admin/leitor).</li>
-        </ul>
-        <ul class="chips"><li>Atualização automática</li><li>Histórico</li><li>Comparabilidade</li></ul>
-      </div>
-      <div class="section-card">
-        <h3>Exemplos de métricas</h3>
-        <ul class="icon-bullets">
-          <li>Emprego formal, admissões/demissões, saldo por setor.</li>
-          <li>Base empresarial: abertura/encerramento por CNAE.</li>
-          <li>Educação e inovação: cursos, pós-graduação, PI.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="analises" class="service-section" aria-labelledby="analises-title">
-    <h2 id="analises-title">Análises</h2>
-    <div class="section-cards">
-      <div class="section-card">
-        <h3>Como entregamos</h3>
-        <ul class="icon-bullets">
-          <li>Séries temporais com sazonalidade e tendência.</li>
-          <li>Benchmarks com municípios/territórios similares.</li>
-          <li>Cenários e projeções explicáveis (preditivos).</li>
-        </ul>
-        <ul class="chips"><li>Cenários</li><li>Benchmark</li><li>Explainability</li></ul>
-      </div>
-      <div class="section-card">
-        <h3>Aplicações típicas</h3>
-        <ul class="icon-bullets">
-          <li>Priorização de políticas setoriais.</li>
-          <li>Antecipação de demanda por serviços públicos.</li>
-          <li>Oportunidades de desenvolvimento econômico.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="relatorios" class="service-section" aria-labelledby="relatorios-title">
-    <h2 id="relatorios-title">Relatórios</h2>
-    <div class="section-cards">
-      <div class="section-card">
-        <h3>Formatos</h3>
-        <ul class="icon-bullets">
-          <li>Executivo (10–15 páginas) — síntese e recomendações.</li>
-          <li>Técnico — metodologia e trilhas de auditoria.</li>
-          <li>Anexos — tabelas e bases de suporte.</li>
-        </ul>
-      </div>
-      <div class="section-card">
-        <h3>Boas práticas</h3>
-        <ul class="icon-bullets">
-          <li>Clareza de hipóteses e limitações.</li>
-          <li>Indicadores acionáveis (quem faz, quando e como medir).</li>
-          <li>Visualizações legíveis em tela e impressão.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPARATIVO DE PACOTES -->
-  <section class="compare" aria-labelledby="compare-title">
-    <h2 id="compare-title">Pacotes</h2>
-    <div class="compare-grid">
-      <!-- coluna “recursos” (titulo descritivo) -->
-      <div class="section-card">
-        <h3>Recursos</h3>
-        <ul class="icon-bullets">
-          <li>KPIs essenciais</li>
-          <li>Filtros por território e período</li>
-          <li>Exportação (PDF/PNG)</li>
-          <li>Relatório executivo</li>
-          <li>Benchmark e cenários</li>
-          <li>Suporte consultivo</li>
-        </ul>
-      </div>
-
-      <!-- Essencial -->
-      <div class="plan-card">
-        <h3>Essencial</h3>
-        <span class="badge">Rápida implantação</span>
-        <ul class="plan-features">
-          <li>✔ KPIs essenciais</li>
-          <li>✔ Filtros básicos</li>
-          <li>✔ Exportação</li>
-          <li>— Relatório executivo</li>
-          <li>— Benchmark / cenários</li>
-          <li>— Suporte consultivo</li>
-        </ul>
-        <div class="plan-cta">
-          <a class="btn btn-outline" href="contato.html">Saber mais</a>
-        </div>
-      </div>
-
-      <!-- Avançado -->
-      <div class="plan-card">
-        <h3>Avançado</h3>
-        <span class="badge" style="background:var(--brand-accent)">Mais escolhido</span>
-        <ul class="plan-features">
-          <li>✔ KPIs essenciais</li>
-          <li>✔ Filtros completos</li>
-          <li>✔ Exportação</li>
-          <li>✔ Relatório executivo</li>
-          <li>✔ Benchmark / cenários</li>
-          <li>— Suporte consultivo</li>
-        </ul>
-        <div class="plan-cta">
-          <a class="btn btn-primary" href="contato.html">Solicitar proposta</a>
-        </div>
-      </div>
-
-      <!-- Custom -->
-      <div class="plan-card">
-        <h3>Custom</h3>
-        <span class="badge">Sob medida</span>
-        <ul class="plan-features">
-          <li>✔ KPIs + indicadores específicos</li>
-          <li>✔ Filtros e visuais customizados</li>
-          <li>✔ Exportação e integrações</li>
-          <li>✔ Relatório executivo + técnico</li>
-          <li>✔ Benchmark / cenários</li>
-          <li>✔ Suporte consultivo</li>
-        </ul>
-        <div class="plan-cta">
-          <a class="btn btn-outline" href="contato.html">Discutir escopo</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Perguntas frequentes</h2>
-    <details>
-      <summary>Em quanto tempo um painel fica no ar?</summary>
-      <p>Projetos Essenciais costumam ir ao ar em poucas semanas, dependendo de fontes e escopo.</p>
-    </details>
-    <details>
-      <summary>Vocês trabalham com dados do cliente?</summary>
-      <p>Sim. Integramos dados internos às fontes oficiais, com trilha de auditoria e governança.</p>
-    </details>
-    <details>
-      <summary>Posso começar pequeno e evoluir?</summary>
-      <p>Claro. Muitos clientes começam com o pacote Essencial e avançam para modelos preditivos.</p>
-    </details>
-  </section>
-
-  <!-- CTA final -->
-  <section class="about-cta">
-    <div class="about-cta__inner">
-      <h2>Quer ver um protótipo com seus indicadores?</h2>
-      <p>Montamos uma prova de valor focada no seu objetivo.</p>
-      <a class="btn btn-primary" href="contato.html">Falar com um consultor</a>
-    </div>
-  </section>
-</main>
-
-
-  <!-- FOOTER (atualizado) -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-top">
-      <div class="footer-grid">
-        <!-- Marca -->
-        <div class="footer-brand">
-          <img src="../assets/logos/logo-cognisum.svg" alt="Cognisum" />
-          <p class="footer-muted">
-            Dados que viram decisão. Inteligência territorial e econômica para gestão pública e institucional.
+  <main>
+    <!-- HERO melhorado -->
+    <section class="hero hero--about" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="servicos-title">Serviços</h1>
+          <p>
+            Dados integrados e visualizados para <strong>decidir com confiança</strong>. 
+            Painéis vivos, análises preditivas e relatórios que conectam diagnóstico a ação — 
+            <strong>sem jargões</strong>.
           </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#dashboards">
+              <span>Ver nossos serviços</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 14l5-5 5 5z"/>
+              </svg>
+            </a>
+            <a class="btn btn-outline" href="contato.html">Solicitar proposta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KPIs dos serviços -->
+    <section aria-label="Diferenciais dos serviços" style="padding: 64px 0;">
+      <div class="container">
+        <div class="kpi-row fade-in">
+          <div class="kpi-item">
+            <span class="kpi-value">24/7</span>
+            <span class="kpi-label">Atualização contínua</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-value">100%</span>
+            <span class="kpi-label">Transparência de fontes</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-value">≤3 sem</span>
+            <span class="kpi-label">Implantação rápida</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-value">Multi</span>
+            <span class="kpi-label">Comparabilidade territorial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo dos serviços com visual melhorado -->
+    <section class="features-section" aria-labelledby="nossas-solucoes">
+      <div class="container">
+        <div class="section-header section-header--soft">
+          <h2 id="nossas-solucoes">Nossas soluções</h2>
+          <p>Soluções modulares para você começar pelo essencial e evoluir para preditivo e governança.</p>
         </div>
 
-        <!-- Contato -->
-        <div class="footer-col">
-          <h4>Contato</h4>
-          <ul class="footer-list">
-            <li class="footer-item">
-              <!-- e-mail -->
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.1-8.7 5.1a1 1 0 0 1-1 0L4 9.1V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z"/></svg>
-              <a href="mailto:atendimento@cognisum.io">atendimento@cognisum.io</a>
-            </li>
-            <li class="footer-item">
-              <!-- telefone -->
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/></svg>
-              <a href="tel:+5516999999999">(16) 9 9999 9999</a>
-            </li>
-            <li class="footer-item">
-              <!-- endereço -->
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
-              <a href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+S%C3%A3o+Carlos+-+SP" target="_blank" rel="noopener">
-                R. Conde do Pinhal, 1762 – Núcleo Res. Sílvio Vilari, São Carlos – SP, 13560-648
-              </a>
-            </li>
-          </ul>
-        </div>
+        <div class="feature-cards fade-in">
+          <!-- Dashboards -->
+          <article class="feature-card card--lift">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3Zm10 0h8v5h-8V3ZM3 13h8v8H3v-8Zm10 7v-9h8v9h-8Z"/></svg>
+            </div>
+            <h3>Dashboards</h3>
+            <p>Indicadores confiáveis, comparáveis e atualizados — prontos para decisão.</p>
+            <ul class="icon-bullets">
+              <li>KPIs por território e período</li>
+              <li>Alertas e variações relevantes</li>
+              <li>Exportação para apresentações</li>
+            </ul>
+            <a class="feature-card__link" href="#dashboards">
+              <span>Saiba mais</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+              </svg>
+            </a>
+          </article>
 
-        <!-- Links -->
-        <div class="footer-col" aria-label="Links úteis">
-          <h4>Links</h4>
-          <ul class="footer-list">
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="cases.html">Cases</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="privacidade.html">Privacidade</a></li>
-            <li><a href="termos.html">Termos</a></li>
-          </ul>
-        </div>
+          <!-- Análises -->
+          <article class="feature-card card--lift">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V3h2v16h16v2H3Zm4-4V9h2v8H7Zm4 0V5h2v12h-2Zm4 0v-6h2v6h-2Z"/></svg>
+            </div>
+            <h3>Análises</h3>
+            <p>Séries temporais, projeções e benchmarks por território e setor.</p>
+            <ul class="icon-bullets">
+              <li>Modelos preditivos e cenários</li>
+              <li>Comparativos com pares</li>
+              <li>Insights explicáveis</li>
+            </ul>
+            <a class="feature-card__link" href="#analises">
+              <span>Ver exemplos</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+              </svg>
+            </a>
+          </article>
 
-        <!-- Social -->
-        <div class="footer-col">
-          <h4>Conecte-se</h4>
-          <ul class="footer-list">
-            <li class="footer-item">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4V8.5z"/></svg>
-              <a href="#" aria-label="LinkedIn da Cognisum">LinkedIn</a>
-            </li>
-            <li class="footer-item">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.5 31.5 0 0 0 .5-5.8 31.5 31.5 0 0 0-.5-5.8ZM9.8 15.5V8.5l6 3.5-6 3.5Z"/></svg>
-              <a href="#" aria-label="YouTube da Cognisum">YouTube</a>
-            </li>
-          </ul>
+          <!-- Relatórios -->
+          <article class="feature-card card--lift">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V7h3.5L14 3.5ZM8 9h8v2H8V9Zm0 4h8v2H8v-2Zm0 4h5v2H8v-2Z"/></svg>
+            </div>
+            <h3>Relatórios</h3>
+            <p>Narrativas claras com achados e recomendações aplicáveis.</p>
+            <ul class="icon-bullets">
+              <li>Executivo + técnico</li>
+              <li>Planos de ação priorizados</li>
+              <li>Material pronto para comitês</li>
+            </ul>
+            <a class="feature-card__link" href="#relatorios">
+              <span>Ver entregas</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALHES POR SERVIÇO com fundo alternado -->
+    <section id="dashboards" class="service-section" style="padding: 64px 0; background: var(--neutral-50);" aria-labelledby="dashboards-title">
+      <div class="container">
+        <div class="section-header section-header--soft">
+          <h2 id="dashboards-title">Dashboards</h2>
+        </div>
+        <div class="section-cards fade-in">
+          <div class="section-card">
+            <h3>O que você recebe</h3>
+            <ul class="icon-bullets">
+              <li>KPIs prioritários com filtros por território, período e setor.</li>
+              <li>Visuais padronizados e exportáveis (PDF/PNG).</li>
+              <li>Usuários e perfis de acesso (admin/leitor).</li>
+            </ul>
+            <ul class="chips"><li>Atualização automática</li><li>Histórico</li><li>Comparabilidade</li></ul>
+          </div>
+          <div class="section-card">
+            <h3>Exemplos de métricas</h3>
+            <ul class="icon-bullets">
+              <li>Emprego formal, admissões/demissões, saldo por setor.</li>
+              <li>Base empresarial: abertura/encerramento por CNAE.</li>
+              <li>Educação e inovação: cursos, pós-graduação, PI.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="analises" class="service-section" style="padding: 64px 0;" aria-labelledby="analises-title">
+      <div class="container">
+        <div class="section-header section-header--soft">
+          <h2 id="analises-title">Análises</h2>
+        </div>
+        <div class="section-cards fade-in">
+          <div class="section-card">
+            <h3>Como entregamos</h3>
+            <ul class="icon-bullets">
+              <li>Séries temporais com sazonalidade e tendência.</li>
+              <li>Benchmarks com municípios/territórios similares.</li>
+              <li>Cenários e projeções explicáveis (preditivos).</li>
+            </ul>
+            <ul class="chips"><li>Cenários</li><li>Benchmark</li><li>Explainability</li></ul>
+          </div>
+          <div class="section-card">
+            <h3>Aplicações típicas</h3>
+            <ul class="icon-bullets">
+              <li>Priorização de políticas setoriais.</li>
+              <li>Antecipação de demanda por serviços públicos.</li>
+              <li>Oportunidades de desenvolvimento econômico.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="relatorios" class="service-section" style="padding: 64px 0; background: var(--neutral-50);" aria-labelledby="relatorios-title">
+      <div class="container">
+        <div class="section-header section-header--soft">
+          <h2 id="relatorios-title">Relatórios</h2>
+        </div>
+        <div class="section-cards fade-in">
+          <div class="section-card">
+            <h3>Formatos</h3>
+            <ul class="icon-bullets">
+              <li>Executivo (10–15 páginas) — síntese e recomendações.</li>
+              <li>Técnico — metodologia e trilhas de auditoria.</li>
+              <li>Anexos — tabelas e bases de suporte.</li>
+            </ul>
+          </div>
+          <div class="section-card">
+            <h3>Boas práticas</h3>
+            <ul class="icon-bullets">
+              <li>Clareza de hipóteses e limitações.</li>
+              <li>Indicadores acionáveis (quem faz, quando e como medir).</li>
+              <li>Visualizações legíveis em tela e impressão.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIVO DE PACOTES com melhor apresentação -->
+    <section class="compare" style="padding: 64px 0;" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-header section-header--soft">
+          <h2 id="compare-title">Escolha seu pacote</h2>
+          <p>Soluções flexíveis que crescem com suas necessidades</p>
+        </div>
+        <div class="compare-grid fade-in">
+          <!-- coluna "recursos" -->
+          <div class="section-card">
+            <h3>Recursos</h3>
+            <ul class="icon-bullets">
+              <li>KPIs essenciais</li>
+              <li>Filtros por território e período</li>
+              <li>Exportação (PDF/PNG)</li>
+              <li>Relatório executivo</li>
+              <li>Benchmark e cenários</li>
+              <li>Suporte consultivo</li>
+            </ul>
+          </div>
+
+          <!-- Essencial -->
+          <div class="plan-card">
+            <h3>Essencial</h3>
+            <span class="badge">Rápida implantação</span>
+            <ul class="plan-features">
+              <li>✔ KPIs essenciais</li>
+              <li>✔ Filtros básicos</li>
+              <li>✔ Exportação</li>
+              <li>— Relatório executivo</li>
+              <li>— Benchmark / cenários</li>
+              <li>— Suporte consultivo</li>
+            </ul>
+            <div class="plan-cta">
+              <a class="btn btn-outline" href="contato.html">Saber mais</a>
+            </div>
+          </div>
+
+          <!-- Avançado -->
+          <div class="plan-card">
+            <h3>Avançado</h3>
+            <span class="badge" style="background:var(--brand-accent)">Mais escolhido</span>
+            <ul class="plan-features">
+              <li>✔ KPIs essenciais</li>
+              <li>✔ Filtros completos</li>
+              <li>✔ Exportação</li>
+              <li>✔ Relatório executivo</li>
+              <li>✔ Benchmark / cenários</li>
+              <li>— Suporte consultivo</li>
+            </ul>
+            <div class="plan-cta">
+              <a class="btn btn-primary" href="contato.html">Solicitar proposta</a>
+            </div>
+          </div>
+
+          <!-- Custom -->
+          <div class="plan-card">
+            <h3>Custom</h3>
+            <span class="badge">Sob medida</span>
+            <ul class="plan-features">
+              <li>✔ KPIs + indicadores específicos</li>
+              <li>✔ Filtros e visuais customizados</li>
+              <li>✔ Exportação e integrações</li>
+              <li>✔ Relatório executivo + técnico</li>
+              <li>✔ Benchmark / cenários</li>
+              <li>✔ Suporte consultivo</li>
+            </ul>
+            <div class="plan-cta">
+              <a class="btn btn-outline" href="contato.html">Discutir escopo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ com melhor espaçamento -->
+    <section class="faq" style="padding: 64px 0; background: var(--neutral-50);" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header section-header--soft">
+          <h2 id="faq-title">Perguntas frequentes</h2>
+        </div>
+        <details class="fade-in">
+          <summary>Em quanto tempo um painel fica no ar?</summary>
+          <p>Projetos Essenciais costumam ir ao ar em poucas semanas, dependendo de fontes e escopo.</p>
+        </details>
+        <details class="fade-in">
+          <summary>Vocês trabalham com dados do cliente?</summary>
+          <p>Sim. Integramos dados internos às fontes oficiais, com trilha de auditoria e governança.</p>
+        </details>
+        <details class="fade-in">
+          <summary>Posso começar pequeno e evoluir?</summary>
+          <p>Claro. Muitos clientes começam com o pacote Essencial e avançam para modelos preditivos.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="about-cta" style="padding: 64px 0;">
+      <div class="container">
+        <div class="about-cta__inner fade-in">
+          <h2>Quer ver um protótipo com seus indicadores?</h2>
+          <p>Montamos uma prova de valor focada no seu objetivo.</p>
+          <a class="btn btn-primary" href="contato.html">Falar com um consultor</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer-top">
+    <div class="footer-grid">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <img src="../assets/logos/logo-cognisum.svg" alt="Cognisum" />
+        <p class="footer-muted">
+          Dados que viram decisão. Inteligência territorial e econômica para gestão pública e institucional de excelência.
+        </p>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.1-8.7 5.1a1 1 0 0 1-1 0L4 9.1V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z"/>
+            </svg>
+            <a href="mailto:atendimento@cognisum.io">atendimento@cognisum.io</a>
+          </li>
+          <li class="footer-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/>
+            </svg>
+            <a href="tel:+5516981301147">(16) 9 8130-1147</a>
+          </li>
+          <li class="footer-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
+            </svg>
+            <a href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+São+Carlos+-+SP" target="_blank" rel="noopener">
+              R. Conde do Pinhal, 1762<br>
+              São Carlos – SP, 13560-648
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Links Column -->
+      <div class="footer-col" aria-label="Links úteis">
+        <h4>Navegação</h4>
+        <ul class="footer-list">
+          <li><a href="sobre.html">Sobre nós</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="cases.html">Cases de sucesso</a></li>
+          <li><a href="blog.html">Blog e insights</a></li>
+          <li><a href="contato.html">Entre em contato</a></li>
+          <li><a href="privacidade.html">Política de privacidade</a></li>
+          <li><a href="termos.html">Termos de uso</a></li>
+        </ul>
+      </div>
+
+      <!-- Social/Newsletter Column -->
+      <div class="footer-col">
+        <h4>Conecte-se conosco</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4V8.5z"/>
+            </svg>
+            <a href="#" aria-label="Siga-nos no LinkedIn">LinkedIn</a>
+          </li>
+          <li class="footer-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.5 31.5 0 0 0 .5-5.8 31.5 31.5 0 0 0-.5-5.8ZM9.8 15.5V8.5l6 3.5-6 3.5Z"/>
+            </svg>
+            <a href="#" aria-label="Inscreva-se em nosso canal no YouTube">YouTube</a>
+          </li>
+        </ul>
+        
+        <div style="margin-top: 20px;">
+          <h5 style="margin: 0 0 12px 0; font-size: 1rem; color: var(--footer-fg);">Newsletter</h5>
+          <form class="newsletter-form" aria-label="Assinar newsletter" onsubmit="handleNewsletterSubmit(event)">
+            <input 
+              type="email" 
+              placeholder="Seu melhor e-mail" 
+              aria-label="Seu e-mail para newsletter" 
+              required 
+              style="width: 100%; padding: 12px; margin-bottom: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); color: #fff; font-size: 0.9rem;"
+            />
+            <button type="submit" class="btn btn-primary" style="width: 100%; background: var(--brand-secondary); padding: 10px 16px;">
+              <span>Receber insights</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container footer-bottom">
-      <span>© Cognisum</span>
-      <span class="footer-muted">CNPJ 00.000.000/0001-00 (exemplo)</span>
-    </div>
-  </footer>
+  <div class="container footer-bottom">
+    <span>© 2024 Cognisum</span>
+    <span class="footer-muted">CNPJ 00.000.000/0001-00</span>
+  </div>
+</footer>
 
   <!-- JS -->
   <script type="module" src="../js/main.js"></script>
+  <script>
+    // fade-in progressivo
+    (function(){
+      const els = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('visible')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting){ entry.target.classList.add('visible'); io.unobserve(entry.target);} });
+      }, { threshold: 0.12 });
+      els.forEach(el => io.observe(el));
+    })();
+    // sombra do header ao rolar
+    (function(){
+      const header = document.getElementById('header');
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 4);
+      onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
 </body>
 </html>
