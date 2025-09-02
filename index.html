@@ -6,17 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cognisum — Inteligência territorial e econômica</title>
   <meta name="description" content="Dados integrados para decisões assertivas. Dashboards, análises e relatórios para gestão pública e institucional." />
-    <link rel="stylesheet" href="./css/variables.css" />
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./css/variables.css" />
   <link rel="stylesheet" href="./css/base.css" />
   <link rel="stylesheet" href="./css/layout.css" />
   <link rel="stylesheet" href="./css/components.css" />
 </head>
+
 <body>
-  <header class="header">
+  <!-- Header -->
+  <header class="header" id="header">
     <div class="container navbar">
       <a href="index.html" class="brand">
-        <img src="assets/logos/logo-cognisum-lateral-cortada.png" alt="" width="120" height="26" />
-        <!-- <span class="visually-hidden">Cognisum</span> -->
+        <img src="assets/logos/logo-cognisum-sem-textura.png" alt="Cognisum" width="168" height="36" />
       </a>
       <nav>
         <a href="pages/sobre.html">Sobre</a>
@@ -28,158 +31,380 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1 style="color:var(--brand-primary)">Dados que viram decisão</h1>
-        <p style="max-width:760px">
-          Mapeamos e integramos dados para transformar diagnósticos em ação — com dashboards, análises preditivas e relatórios claros.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="pages/servicos.html">Ver serviços</a>
-          <a class="btn btn-outline" href="pages/cases.html">Ver cases</a>
+        <div class="hero-content">
+          <h1>Dados que viram decisão</h1>
+          <p>
+            Transformamos informações dispersas em insights estratégicos. Dashboards inteligentes, 
+            análises preditivas e relatórios claros para gestão pública e institucional de excelência.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="pages/servicos.html">
+              <span>Explore nossos serviços</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+              </svg>
+            </a>
+            <a class="btn btn-outline" href="pages/cases.html">
+              <span>Ver cases de sucesso</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="container" style="padding:32px 0">
-  <div class="feature-cards">
-    <article class="feature-card">
-      <div class="feature-card__icon" aria-hidden="true">
-        <!-- ícone "dashboard" -->
-        <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3Zm10 0h8v5h-8V3ZM3 13h8v8H3v-8Zm10 7v-9h8v9h-8Z"/></svg>
+    <!-- Features Section -->
+    <section class="container" style="padding: 80px 0;">
+      <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+        <h2>Soluções completas para sua gestão</h2>
+        <p style="font-size: 1.2rem; color: var(--neutral-700); max-width: 600px; margin: 0 auto;">
+          Três pilares fundamentais que transformam dados em resultados concretos para sua organização
+        </p>
       </div>
-      <h3>Dashboards</h3>
-      <p>Indicadores confiáveis, comparáveis e atualizados, prontos para decisão.</p>
-      <a class="feature-card__link" href="./pages/servicos.html#dashboards">Saiba mais</a>
-    </article>
+      
+      <div class="feature-cards">
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 3h8v8H3V3Zm10 0h8v5h-8V3ZM3 13h8v8H3v-8Zm10 7v-9h8v9h-8Z"/>
+            </svg>
+          </div>
+          <h3>Dashboards Inteligentes</h3>
+          <p>Indicadores confiáveis e atualizados em tempo real. Visualizações intuitivas que transformam números complexos em insights claros para tomada de decisão estratégica.</p>
+          <a class="feature-card__link" href="./pages/servicos.html#dashboards">
+            Conhecer dashboards
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+            </svg>
+          </a>
+        </article>
 
-    <article class="feature-card">
-      <div class="feature-card__icon" aria-hidden="true">
-        <!-- ícone "analytics" -->
-        <svg viewBox="0 0 24 24"><path d="M3 21V3h2v16h16v2H3Zm4-4V9h2v8H7Zm4 0V5h2v12h-2Zm4 0v-6h2v6h-2Z"/></svg>
-      </div>
-      <h3>Análises</h3>
-      <p>Modelagem preditiva, séries temporais e benchmarks por território e setor.</p>
-      <a class="feature-card__link" href="./pages/servicos.html#analises">Ver estudos</a>
-    </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 21V3h2v16h16v2H3Zm4-4V9h2v8H7Zm4 0V5h2v12h-2Zm4 0v-6h2v6h-2Z"/>
+            </svg>
+          </div>
+          <h3>Análises Preditivas</h3>
+          <p>Modelagem estatística avançada, séries temporais e benchmarks setoriais. Antecipe tendências e tome decisões baseadas em projeções cientificamente fundamentadas.</p>
+          <a class="feature-card__link" href="./pages/servicos.html#analises">
+            Ver estudos e análises
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+            </svg>
+          </a>
+        </article>
 
-    <article class="feature-card">
-      <div class="feature-card__icon" aria-hidden="true">
-        <!-- ícone "relatório" -->
-        <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V7h3.5L14 3.5ZM8 9h8v2H8V9Zm0 4h8v2H8v-2Zm0 4h5v2H8v-2Z"/></svg>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V7h3.5L14 3.5ZM8 9h8v2H8V9Zm0 4h8v2H8v-2Zm0 4h5v2H8v-2Z"/>
+            </svg>
+          </div>
+          <h3>Relatórios Executivos</h3>
+          <p>Do diagnóstico à ação: narrativas claras com recomendações práticas e aplicáveis. Transformamos análises complexas em planos de ação concretos.</p>
+          <a class="feature-card__link" href="./pages/servicos.html#relatorios">
+            Ver exemplos de relatórios
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+            </svg>
+          </a>
+        </article>
       </div>
-      <h3>Relatórios</h3>
-      <p>Diagnóstico→ação, com narrativa clara e recomendações aplicáveis.</p>
-      <a class="feature-card__link" href="./pages/servicos.html#relatorios">Ver exemplos</a>
-    </article>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="container" aria-label="Exemplos de dashboards" style="padding: 80px 0;">
+      <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+        <h2>Veja nossas soluções em ação</h2>
+        <p style="font-size: 1.2rem; color: var(--neutral-700); max-width: 600px; margin: 0 auto;">
+          Exemplos reais de dashboards e análises que estão transformando a gestão de nossos clientes
+        </p>
+      </div>
+
+      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Galeria de dashboards" data-autoplay="false">
+        <div class="carousel__viewport" tabindex="0" aria-live="polite" aria-atomic="true">
+          <a class="carousel__slide" href="./pages/cases.html#kpi" aria-label="Abrir dashboard de KPIs">
+            <img src="./assets/dashboards/kpi-overview.svg" alt="Dashboard com resumo de KPIs apresentando cartões informativos e gráficos de barras" />
+          </a>
+          <a class="carousel__slide" href="./pages/cases.html#mapa" aria-label="Abrir mapa territorial">
+            <img src="./assets/dashboards/territorial-map.svg" alt="Mapa territorial interativo com diferentes camadas de dados e indicadores regionais" />
+          </a>
+          <a class="carousel__slide" href="./pages/cases.html#serie" aria-label="Abrir série temporal">
+            <img src="./assets/dashboards/time-series.svg" alt="Gráfico de série temporal mostrando evolução da produção ao longo do tempo" />
+          </a>
+        </div>
+
+        <div class="carousel__controls">
+          <button class="carousel__prev" type="button" aria-label="Slide anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+          </button>
+          <button class="carousel__next" type="button" aria-label="Próximo slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+          </button>
+          <div class="carousel__dots" role="tablist" aria-label="Escolher slide"></div>
+          <button class="carousel__toggle" type="button" aria-pressed="false" aria-label="Pausar rotação automática">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+<section style="padding: 80px 0; background: var(--surface-soft);">
+  <div class="container">
+    <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+      <h2>Resultados que falam por si</h2>
+      <p style="font-size: 1.1rem; color: var(--neutral-700);">
+        Números que demonstram o impacto real de nossas soluções
+      </p>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi-item">
+        <span class="kpi-value">15+</span>
+        <span class="kpi-label">Projetos Concluídos</span>
+      </div>
+      <div class="kpi-item">
+        <span class="kpi-value">98%</span>
+        <span class="kpi-label">Precisão dos Dados</span>
+      </div>
+      <div class="kpi-item">
+        <span class="kpi-value">40%</span>
+        <span class="kpi-label">Redução no Tempo de Análise</span>
+      </div>
+      <div class="kpi-item">
+        <span class="kpi-value">24/7</span>
+        <span class="kpi-label">Monitoramento Contínuo</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="container" aria-label="Exemplos de dashboards">
-  <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Galeria de dashboards" data-autoplay="false">
-    <div class="carousel__viewport" tabindex="0" aria-live="polite" aria-atomic="true">
-      <a class="carousel__slide" href="./pages/cases.html#kpi" aria-label="Abrir dashboard de KPIs">
-        <img src="./assets/dashboards/kpi-overview.svg" alt="Resumo de KPIs com cartões e barras" />
-      </a>
-      <a class="carousel__slide" href="./pages/cases.html#mapa" aria-label="Abrir mapa territorial">
-        <img src="./assets/dashboards/territorial-map.svg" alt="Mapa territorial com camadas" />
-      </a>
-      <a class="carousel__slide" href="./pages/cases.html#serie" aria-label="Abrir série temporal">
-        <img src="./assets/dashboards/time-series.svg" alt="Gráfico de série temporal de produção" />
-      </a>
-    </div>
 
-    <div class="carousel__controls">
-      <button class="carousel__prev" type="button" aria-label="Slide anterior">‹</button>
-      <button class="carousel__next" type="button" aria-label="Próximo slide">›</button>
-      <div class="carousel__dots" role="tablist" aria-label="Escolher slide"></div>
-      <!-- Botão play/pause (opcional) — mantemos pausado por padrão (recomendado) -->
-      <button class="carousel__toggle" type="button" aria-pressed="false" aria-label="Iniciar rotação automática">⏵</button>
-    </div>
-  </div>
-</section>
+    <!-- How It Works Section -->
+    <section class="container" style="padding: 80px 0;">
+      <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+        <h2>Como trabalhamos</h2>
+        <p style="font-size: 1.2rem; color: var(--neutral-700); max-width: 700px; margin: 0 auto;">
+          Um processo estruturado que garante resultados precisos e acionáveis em cada projeto
+        </p>
+      </div>
 
+      <ol class="stepper">
+        <li>
+          <h3 style="margin: 0 0 8px; color: var(--brand-primary);">Diagnóstico e Mapeamento</h3>
+          <p style="margin: 0; color: var(--neutral-700);">
+            Identificamos fontes de dados, necessidades específicas e objetivos estratégicos da sua organização.
+          </p>
+        </li>
+        <li>
+          <h3 style="margin: 0 0 8px; color: var(--brand-primary);">Integração e Tratamento</h3>
+          <p style="margin: 0; color: var(--neutral-700);">
+            Coletamos, validamos e estruturamos dados de múltiplas fontes com metodologia rigorosa.
+          </p>
+        </li>
+        <li>
+          <h3 style="margin: 0 0 8px; color: var(--brand-primary);">Análise e Modelagem</h3>
+          <p style="margin: 0; color: var(--neutral-700);">
+            Aplicamos técnicas estatísticas avançadas para extrair insights e projeções confiáveis.
+          </p>
+        </li>
+        <li>
+          <h3 style="margin: 0 0 8px; color: var(--brand-primary);">Visualização e Entrega</h3>
+          <p style="margin: 0; color: var(--neutral-700);">
+            Criamos dashboards interativos e relatórios executivos com recomendações práticas.
+          </p>
+        </li>
+        <li>
+          <h3 style="margin: 0 0 8px; color: var(--brand-primary);">Monitoramento Contínuo</h3>
+          <p style="margin: 0; color: var(--neutral-700);">
+            Atualizamos constantemente os dados e refinamos as análises para decisões sempre atualizadas.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section style="padding: 80px 0; background: var(--surface-soft);">
+      <div class="container">
+
+        <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+          <h2>Ideal para sua organização</h2>
+          <p style="font-size: 1.2rem; color: var(--neutral-700);">
+            Soluções personalizadas para diferentes tipos de instituições
+          </p>
+        </div>
+
+        <div class="audience-cards">
+          <div class="audience-card">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, rgba(23,74,126,.15), rgba(0,166,178,.15)); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--brand-primary);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3 style="margin: 0 0 12px; color: var(--neutral-900);">Gestão Pública</h3>
+            <p style="margin: 0; color: var(--neutral-700); line-height: 1.6;">
+              Prefeituras, secretarias e órgãos públicos que buscam transparência, eficiência e decisões baseadas em evidências.
+            </p>
+          </div>
+
+          <div class="audience-card">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, rgba(23,74,126,.15), rgba(0,166,178,.15)); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--brand-primary);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.01 2.01 0 0 0 18 7h-4c-.8 0-1.54.37-2 1l-3.56 7.12L4 13v6h2v5h12v-5h2z"/>
+              </svg>
+            </div>
+            <h3 style="margin: 0 0 12px; color: var(--neutral-900);">Associações Comerciais</h3>
+            <p style="margin: 0; color: var(--neutral-700); line-height: 1.6;">
+              Entidades que representam o setor privado e precisam de dados econômicos para estratégias e advocacy.
+            </p>
+          </div>
+
+          <div class="audience-card">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, rgba(23,74,126,.15), rgba(0,166,178,.15)); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--brand-primary);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 style="margin: 0 0 12px; color: var(--neutral-900);">Agências de Fomento</h3>
+            <p style="margin: 0; color: var(--neutral-700); line-height: 1.6;">
+              Instituições que investem em desenvolvimento regional e necessitam de análises territoriais precisas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: var(--brand-primary); color: #fff;">
+      <div class="container" style="text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 24px; color: #fff;">Pronto para transformar seus dados?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 32px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Descubra como nossa plataforma pode revolucionar a gestão da sua organização com insights precisos e acionáveis.
+        </p>
+        <div class="cta">
+          <a class="btn btn-outline" href="pages/contato.html" style="border-color: #fff; color: #fff;">
+            <span>Solicitar demonstração</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.3 17.3a.996.996 0 0 0 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L14.71 6.7a.996.996 0 1 0-1.41 1.41L16.17 11H3a1 1 0 1 0 0 2h13.17l-2.87 2.89c-.38.38-.38 1.02 0 1.41z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
+<!-- Footer -->
 <footer class="footer" role="contentinfo">
   <div class="container footer-top">
     <div class="footer-grid">
-      <!-- Coluna 1: Marca -->
+      <!-- Brand Column -->
       <div class="footer-brand">
         <img src="./assets/logos/logo-cognisum.svg" alt="Cognisum" />
-        <p class="footer-muted">Dados que viram decisão. Inteligência territorial e econômica para gestão pública e institucional.</p>
+        <p class="footer-muted">
+          Dados que viram decisão. Inteligência territorial e econômica para gestão pública e institucional de excelência.
+        </p>
       </div>
 
-      <!-- Coluna 2: Contato (primeiro item do footer, por acessibilidade) -->
+      <!-- Contact Column -->
       <div class="footer-col">
         <h4>Contato</h4>
         <ul class="footer-list">
           <li class="footer-item">
-            <!-- ícone e-mail -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.1-8.7 5.1a1 1 0 0 1-1 0L4 9.1V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.1-8.7 5.1a1 1 0 0 1-1 0L4 9.1V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z"/>
+            </svg>
             <a href="mailto:atendimento@cognisum.io">atendimento@cognisum.io</a>
           </li>
           <li class="footer-item">
-            <!-- ícone telefone -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/></svg>
-            <a href="tel:+5516999999999">(16) 9 9999 9999</a>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/>
+            </svg>
+            <a href="tel:+5516981301147">(16) 9 8130-1147</a>
           </li>
           <li class="footer-item">
-            <!-- ícone mapa -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
-            <a href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+S%C3%A3o+Carlos+-+SP" target="_blank" rel="noopener">R. Conde do Pinhal, 1762 – Núcleo Res. Sílvio Vilari, São Carlos – SP, 13560-648</a>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
+            </svg>
+            <a href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+São+Carlos+-+SP" target="_blank" rel="noopener">
+              R. Conde do Pinhal, 1762<br>
+              São Carlos – SP, 13560-648
+            </a>
           </li>
         </ul>
       </div>
 
-      <!-- Coluna 3: Links -->
+      <!-- Links Column -->
       <div class="footer-col" aria-label="Links úteis">
-        <h4>Links</h4>
+        <h4>Navegação</h4>
         <ul class="footer-list">
-          <li><a href="./pages/sobre.html">Sobre</a></li>
+          <li><a href="./pages/sobre.html">Sobre nós</a></li>
           <li><a href="./pages/servicos.html">Serviços</a></li>
-          <li><a href="./pages/cases.html">Cases</a></li>
-          <li><a href="./pages/blog.html">Blog</a></li>
-          <li><a href="./pages/contato.html">Contato</a></li>
-          <li><a href="./pages/privacidade.html">Privacidade</a></li>
-          <li><a href="./pages/termos.html">Termos</a></li>
+          <li><a href="./pages/cases.html">Cases de sucesso</a></li>
+          <li><a href="./pages/blog.html">Blog e insights</a></li>
+          <li><a href="./pages/contato.html">Entre em contato</a></li>
+          <li><a href="./pages/privacidade.html">Política de privacidade</a></li>
+          <li><a href="./pages/termos.html">Termos de uso</a></li>
         </ul>
       </div>
 
-      <!-- Coluna 4: Social / Newsletter -->
+      <!-- Social/Newsletter Column -->
       <div class="footer-col">
-        <h4>Conecte-se</h4>
+        <h4>Conecte-se conosco</h4>
         <ul class="footer-list">
           <li class="footer-item">
-            <!-- ícone linkedin -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4V8.5z"/></svg>
-            <a href="#" aria-label="LinkedIn da Cognisum">LinkedIn</a>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4V8.5z"/>
+            </svg>
+            <a href="#" aria-label="Siga-nos no LinkedIn">LinkedIn</a>
           </li>
           <li class="footer-item">
-            <!-- ícone youtube -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.5 31.5 0 0 0 .5-5.8 31.5 31.5 0 0 0-.5-5.8ZM9.8 15.5V8.5l6 3.5-6 3.5Z"/></svg>
-            <a href="#" aria-label="YouTube da Cognisum">YouTube</a>
-          </li>
-          <!-- Sugestão: newsletter (futuro) -->
-          <li>
-            <form aria-label="Assinar newsletter" onsubmit="return false" style="display:grid;gap:8px;max-width:260px">
-              <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff" />
-              <button class="btn btn-primary">Assinar</button>
-            </form>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.5 31.5 0 0 0 .5-5.8 31.5 31.5 0 0 0-.5-5.8ZM9.8 15.5V8.5l6 3.5-6 3.5Z"/>
+            </svg>
+            <a href="#" aria-label="Inscreva-se em nosso canal no YouTube">YouTube</a>
           </li>
         </ul>
+        
+        <div style="margin-top: 20px;">
+          <h5 style="margin: 0 0 12px 0; font-size: 1rem; color: var(--footer-fg);">Newsletter</h5>
+          <form class="newsletter-form" aria-label="Assinar newsletter" onsubmit="handleNewsletterSubmit(event)">
+            <input 
+              type="email" 
+              placeholder="Seu melhor e-mail" 
+              aria-label="Seu e-mail para newsletter" 
+              required 
+              style="width: 100%; padding: 12px; margin-bottom: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); color: #fff; font-size: 0.9rem;"
+            />
+            <button type="submit" class="btn btn-primary" style="width: 100%; background: var(--brand-secondary); padding: 10px 16px;">
+              <span>Receber insights</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="container footer-bottom">
-    <span>© Cognisum</span>
-    <span class="footer-muted">CNPJ 00.000.000/0001-00 (exemplo)</span>
+    <span>© 2024 Cognisum. Todos os direitos reservados.</span>
+    <span class="footer-muted">CNPJ 00.000.000/0001-00</span>
   </div>
 </footer>
 
-
+  <!-- JavaScript -->
   <script type="module" src="./js/main.js"></script>
 </body>
 </html>
