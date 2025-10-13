@@ -44,12 +44,13 @@
   padding: 6px 10px; border-radius: 8px;
   transition: background-color .2s ease, color .2s ease;
 }
-.navbar a:hover{ background: rgba(23,74,126,.08); text-decoration:none; }
-.navbar a.is-active{ background: rgba(23,74,126,.10); font-weight:700; }
+.navbar a:not(.btn):hover{ background: rgba(23,74,126,.08); text-decoration:none; }
+.navbar a:not(.btn).is-active{ background: rgba(23,74,126,.10); font-weight:700; }
 .navbar a:focus-visible{
   outline: 2px solid color-mix(in srgb, var(--brand-primary) 70%, transparent);
   outline-offset: 2px;
 }
+
 
 /* ========== Hero (com variantes) ========== */
 .hero{
@@ -440,59 +441,42 @@
     z-index: -1;
   }
   
-  /* Banner responsivo */
+  /* === Hero com banner de imagem === */
+.hero {
+  width: 100%;
+  padding: 0;
+  background: none !important;
+}
+
+.hero::before {
+  content: none !important;
+}
+
+.hero-banner {
+  width: 100%;
+  position: relative;
+  background: var(--surface-soft); /* fundo suave caso a imagem não preencha */
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* MUDANÇA: contain ao invés de cover */
+  max-height: 600px; /* limite de altura no desktop */
+}
+
+/* Mobile: ajustes para telas pequenas */
+@media (max-width: 768px) {
   .hero-banner img {
-    min-height: 300px;
-    object-fit: cover;
+    max-height: 400px; /* altura menor no mobile */
+    object-fit: contain; /* garante que a imagem apareça completa */
   }
-  
-  .feature-cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .feature-card {
-    padding: 24px 20px;
-  }
-  
-  .kpi-row {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .stepper li {
-    padding: 16px 16px 16px 52px;
-  }
-  
-  .stepper li::before {
-    width: 28px;
-    height: 28px;
-    font-size: 1rem;
-  }
-  
-  .audience-cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .cta {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .cta .btn {
-    width: 100%;
-  }
-  
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .hero-banner img {
+    max-height: 300px;
   }
 }
 
@@ -534,3 +518,4 @@
   }
 }
 
+}
