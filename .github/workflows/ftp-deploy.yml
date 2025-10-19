@@ -1,0 +1,28 @@
+name: Deploy via FTP
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy to Locaweb
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        password: ${{ secrets.PASS }}
+        port: 21
+        server-dir: /home/cognisum1/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.vscode/**
+          **/.github/**
