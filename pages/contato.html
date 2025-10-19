@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,151 +17,153 @@
 
   <!-- Ajustes leves e locais para o formulário -->
   <style>
-    .contact-intro { text-align:center; max-width:780px; margin:0 auto var(--space-8); }
-    .form { display:grid; gap:12px; max-width:720px; }
-    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-    @media (max-width:768px){ .form-grid{ grid-template-columns:1fr; } }
-    .field label { display:block; font-weight:600; margin-bottom:6px; }
-    .control, .textarea, .select {
-      width:100%; padding:12px 14px; border:1px solid var(--neutral-200);
-      border-radius:12px; background:#fff; font-size:1rem;
-      transition:border-color .15s ease, box-shadow .15s ease;
+    .contact-intro {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto var(--space-8);
     }
-    .textarea { min-height:140px; resize:vertical; }
-    .control:focus, .textarea:focus, .select:focus {
-      outline:none; border-color: var(--brand-primary);
-      box-shadow: 0 0 0 3px rgba(23,74,126,.15);
+
+    .form {
+      display: grid;
+      gap: 12px;
+      max-width: 720px;
     }
-    .help { font-size:.9rem; color:var(--neutral-600); margin-top:6px; }
-    .status { font-size:.95rem; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width:768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .control,
+    .textarea,
+    .select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--neutral-200);
+      border-radius: 12px;
+      background: #fff;
+      font-size: 1rem;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .control:focus,
+    .textarea:focus,
+    .select:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px rgba(23, 74, 126, .15);
+    }
+
+    .help {
+      font-size: .9rem;
+      color: var(--neutral-600);
+      margin-top: 6px;
+    }
+
+    .status {
+      font-size: .95rem;
+    }
   </style>
 </head>
+
 <body>
   <!-- HEADER -->
-<header class="header" id="header">
-  <div class="container navbar">
-    <a href="../index.html" class="brand" aria-label="Página inicial da Cognisum">
-      <img src="../public/logo-semfundo1.png" alt="Cognisum" />
-    </a>
-    
-    <!-- Botão hambúrguer -->
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <nav id="mainNav">
-      <a href="sobre.html">Sobre</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="cases.html">Cases</a>
-      <a href="blog.html">Blog</a>
-      <a class="btn btn-primary is-active" href="contato.html" aria-current="page">Contato</a>
-    </nav>
-  </div>
-</header>
+  <header class="header" id="header">
+    <div class="container navbar">
+      <a href="../index.html" class="brand" aria-label="Página inicial da Cognisum">
+        <img src="../public/logo-semfundo1.png" alt="Cognisum" />
+      </a>
+
+      <!-- Botão hambúrguer -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="mainNav">
+        <a href="../index.html" aria-current="page">Home</a>
+        <a href="servicos.html">Serviços</a>
+        <!-- <a href="pages/cases.html">Cases</a> -->
+        <!-- <a href="pages/blog.html">Blog</a> -->
+        <a class="is-active" href="contato.html" aria-current="page">Contato</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- MAIN -->
   <main>
     <!-- HERO (coerente com as outras páginas) -->
-    <section class="hero" aria-labelledby="contato-hero-title">
-      <div class="container">
-        <div class="hero-content">
-          <h1 id="contato-hero-title">Fale com a Cognisum</h1>
-          <p class="contact-intro">
-            Conte seu desafio e desenhamos uma prova de valor com indicadores e análises que
-            aceleram a decisão. Responderemos rapidamente em horário comercial.
-          </p>
-          <div class="cta">
-            <a class="btn btn-primary" href="mailto:atendimento@cognisum.com.br">Enviar e-mail</a>
-            <a class="btn btn-outline" href="tel:+5516981301147">(16) 9 8130-1147</a>
-          </div>
-        </div>
+<section class="hero" aria-labelledby="contato-hero-title">
+  <div class="container">
+    <div class="hero-content">
+      <h1 id="contato-hero-title">Fale com a Cognisum</h1>
+      <p class="contact-intro">
+        Conte seu desafio e desenhamos uma prova de valor com indicadores e análises que
+        aceleram a decisão. Responderemos rapidamente em horário comercial.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://wa.me/message/WINS35DE3ZMBE1" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+            viewBox="0 0 24 24" style="margin-right:8px;">
+            <path
+              d="M20.52 3.48A11.78 11.78 0 0 0 12 0 11.93 11.93 0 0 0 .22 11.91a11.8 11.8 0 0 0 1.6 5.95L0 24l6.33-1.65a11.83 11.83 0 0 0 5.67 1.44h.01A11.92 11.92 0 0 0 24 11.98a11.76 11.76 0 0 0-3.48-8.5ZM12 21.36a9.53 9.53 0 0 1-4.86-1.32l-.35-.2-3.76.98 1-3.66-.23-.37a9.56 9.56 0 0 1-1.46-5.07A9.63 9.63 0 0 1 12 2.4a9.58 9.58 0 0 1 6.77 16.36A9.53 9.53 0 0 1 12 21.36Zm5.26-7.16c-.29-.14-1.7-.83-1.96-.92-.26-.1-.45-.14-.63.14-.18.27-.73.91-.9 1.1-.17.18-.33.2-.62.07a7.91 7.91 0 0 1-2.32-1.43 8.74 8.74 0 0 1-1.61-2c-.17-.3 0-.46.13-.63.13-.17.3-.45.45-.68.14-.22.19-.37.29-.62.1-.25.05-.46-.02-.64-.07-.18-.63-1.51-.86-2.07-.23-.55-.46-.47-.63-.48H8.3c-.18 0-.46.07-.7.34s-.9.88-.9 2.13.93 2.47 1.06 2.64c.13.17 1.83 2.93 4.44 4.11.62.27 1.1.43 1.48.55.62.2 1.18.17 1.62.1.5-.08 1.52-.62 1.73-1.22.21-.6.21-1.12.15-1.22-.06-.1-.25-.16-.54-.29Z" />
+          </svg>
+          WhatsApp
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- CONTEÚDO -->
-    <section class="about-section" style="padding:64px 0;">
-      <div class="container section-cards">
-        <!-- Formulário -->
+   <!-- CONTEÚDO -->
+    <section class="about-section" style="padding:32px 0 64px;">
+      <div class="container" style="max-width:720px;">
+        <!-- Informações centralizadas -->
         <div class="section-card">
-          <h2 style="margin-top:0">Envie sua mensagem</h2>
+          <h2 style="margin-top:0; text-align:center;">Informações de contato</h2>
 
-          <form id="contact-form" class="form" novalidate>
-            <!-- honeypot antispam -->
-            <input type="text" name="_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Nome</label>
-                <input id="name" name="name" class="control" autocomplete="name" required />
-              </div>
-              <div class="field">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" class="control" autocomplete="email" required />
-              </div>
-            </div>
-
-            <div class="form-grid">
-              <div class="field">
-                <label for="org">Organização</label>
-                <input id="org" name="org" class="control" autocomplete="organization" />
-              </div>
-              <div class="field">
-                <label for="assunto">Assunto</label>
-                <select id="assunto" name="assunto" class="select">
-                  <option value="proposta">Solicitar proposta</option>
-                  <option value="demo">Ver demonstração</option>
-                  <option value="parceria">Parcerias</option>
-                  <option value="outro">Outro</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="message">Mensagem</label>
-              <textarea id="message" name="message" class="textarea" required placeholder="Conte brevemente seu contexto e objetivo."></textarea>
-              <p class="help">Falamos português e inglês.</p>
-            </div>
-
-            <label style="display:flex; gap:8px; align-items:flex-start; font-size:.95rem">
-              <input type="checkbox" required style="margin-top:4px" />
-              <span>Concordo em ser contatado(a) pela Cognisum. Usaremos seus dados apenas para este atendimento.</span>
-            </label>
-
-            <div style="display:flex; gap:12px; align-items:center">
-              <button class="btn btn-primary" type="submit">Enviar</button>
-              <small id="form-status" role="status" aria-live="polite" class="status footer-muted"></small>
-            </div>
-          </form>
-        </div>
-
-        <!-- Informações -->
-        <aside class="section-card">
-          <h2 style="margin-top:0">Informações de contato</h2>
-
-          <ul class="icon-list" style="margin-top:8px">
+          <ul class="icon-list" style="margin-top:24px">
             <li><span class="icon" aria-hidden="true"></span>
               <a href="mailto:atendimento@cognisum.io">atendimento@cognisum.io</a>
             </li>
             <li><span class="icon" aria-hidden="true"></span>
-              <a href="tel:+5516999999999">(16) 9 8130-1147</a>
+              <a href="tel:+5516981301147">(16) 9 8130-1147</a>
             </li>
             <li><span class="icon" aria-hidden="true"></span>
               <a target="_blank" rel="noopener"
-                 href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+S%C3%A3o+Carlos+-+SP">
-                 R. Conde do Pinhal, 1762 – São Carlos – SP, 13560-648
+                href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+S%C3%A3o+Carlos+-+SP">
+                R. Conde do Pinhal, 1762 – São Carlos – SP, 13560-648
               </a>
             </li>
           </ul>
 
-          <h3 style="margin-top:16px">Atendimento</h3>
-          <p class="footer-muted" style="margin:0">Seg–Sex, 9h–18h (BRT)</p>
+          <h3 style="margin-top:24px; text-align:center;">Atendimento</h3>
+          <p class="footer-muted" style="margin:8px 0 0; text-align:center;">Seg–Sex, 9h–18h (BRT)</p>
 
-          <div class="callout" style="margin-top:16px">
-            Prefere uma conversa rápida? Envie um e-mail com <strong>“Quero um protótipo”</strong> no assunto e retornamos com um modelo inicial.
+          <div class="callout" style="margin-top:24px">
+            Prefere uma conversa rápida? Envie um e-mail com <strong>"Quero um protótipo"</strong> no assunto e
+            retornamos com um modelo inicial.
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
@@ -176,121 +179,124 @@
     </section>
   </main>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-  <div class="container footer-top">
-    <div class="footer-grid">
-      <!-- Brand Column -->
-      <div class="footer-brand">
-        <img src="../assets/logos/logo-cognisum.svg" alt="Cognisum" />
-        <p class="footer-muted">
-          Dados que viram decisão. Inteligência territorial e econômica para gestão pública e institucional de excelência.
-        </p>
-      </div>
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <img src="../assets/logos/logo-cognisum.svg" alt="Cognisum" />
+          <p class="footer-muted">
+            Dados que viram decisão. Inteligência territorial e econômica para gestão pública e institucional de
+            excelência.
+          </p>
+        </div>
 
-      <!-- Contact Column -->
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <ul class="footer-list">
-          <li class="footer-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.1-8.7 5.1a1 1 0 0 1-1 0L4 9.1V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z"/>
-            </svg>
-            <a href="mailto:atendimento@cognisum.io">atendimento@cognisum.io</a>
-          </li>
-          <li class="footer-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/>
-            </svg>
-            <a href="tel:+5516981301147">(16) 9 8130-1147</a>
-          </li>
-          <li class="footer-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
-            </svg>
-            <a href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+São+Carlos+-+SP" target="_blank" rel="noopener">
-              R. Conde do Pinhal, 1762<br>
-              São Carlos – SP, 13560-648
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Links Column -->
-      <div class="footer-col" aria-label="Links úteis">
-        <h4>Navegação</h4>
-        <ul class="footer-list">
-          <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="cases.html">Cases de sucesso</a></li>
-          <li><a href="blog.html">Blog e insights</a></li>
-          <li><a href="contato.html">Entre em contato</a></li>
-          <li><a href="privacidade.html">Política de privacidade</a></li>
-          <li><a href="termos.html">Termos de uso</a></li>
-        </ul>
-      </div>
-
-      <!-- Social/Newsletter Column -->
-      <div class="footer-col">
-        <h4>Conecte-se conosco</h4>
-        <ul class="footer-list">
-          <li class="footer-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4V8.5z"/>
-            </svg>
-            <a href="#" aria-label="Siga-nos no LinkedIn">LinkedIn</a>
-          </li>
-          <li class="footer-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.5 31.5 0 0 0 .5-5.8 31.5 31.5 0 0 0-.5-5.8ZM9.8 15.5V8.5l6 3.5-6 3.5Z"/>
-            </svg>
-            <a href="#" aria-label="Inscreva-se em nosso canal no YouTube">YouTube</a>
-          </li>
-        </ul>
-        
-        <div style="margin-top: 20px;">
-          <h5 style="margin: 0 0 12px 0; font-size: 1rem; color: var(--footer-fg);">Newsletter</h5>
-          <form class="newsletter-form" aria-label="Assinar newsletter" onsubmit="handleNewsletterSubmit(event)">
-            <input 
-              type="email" 
-              placeholder="Seu melhor e-mail" 
-              aria-label="Seu e-mail para newsletter" 
-              required 
-              style="width: 100%; padding: 12px; margin-bottom: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); color: #fff; font-size: 0.9rem;"
-            />
-            <button type="submit" class="btn btn-primary" style="width: 100%; background: var(--brand-secondary); padding: 10px 16px;">
-              <span>Receber insights</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.1-8.7 5.1a1 1 0 0 1-1 0L4 9.1V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z" />
               </svg>
-            </button>
-          </form>
+              <a href="mailto:atendimento@cognisum.io">atendimento@cognisum.io</a>
+            </li>
+            <li class="footer-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z" />
+              </svg>
+              <a href="tel:+5516981301147">(16) 9 8130-1147</a>
+            </li>
+            <li class="footer-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+              </svg>
+              <a href="https://maps.google.com/?q=R.+Conde+do+Pinhal,+1762,+São+Carlos+-+SP" target="_blank"
+                rel="noopener">
+                R. Conde do Pinhal, 1762<br>
+                São Carlos – SP, 13560-648
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Links Column -->
+        <div class="footer-col" aria-label="Links úteis">
+          <h4>Navegação</h4>
+          <ul class="footer-list">
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="cases.html">Cases de sucesso</a></li>
+            <li><a href="blog.html">Blog e insights</a></li>
+            <li><a href="contato.html">Entre em contato</a></li>
+            <li><a href="privacidade.html">Política de privacidade</a></li>
+            <li><a href="termos.html">Termos de uso</a></li>
+          </ul>
+        </div>
+
+        <!-- Social/Newsletter Column -->
+        <div class="footer-col">
+          <h4>Conecte-se conosco</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4V8.5z" />
+              </svg>
+              <a href="#" aria-label="Siga-nos no LinkedIn">LinkedIn</a>
+            </li>
+            <li class="footer-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.5 31.5 0 0 0 .5-5.8 31.5 31.5 0 0 0-.5-5.8ZM9.8 15.5V8.5l6 3.5-6 3.5Z" />
+              </svg>
+              <a href="#" aria-label="Inscreva-se em nosso canal no YouTube">YouTube</a>
+            </li>
+          </ul>
+
+          <div style="margin-top: 20px;">
+            <h5 style="margin: 0 0 12px 0; font-size: 1rem; color: var(--footer-fg);">Newsletter</h5>
+            <form class="newsletter-form" aria-label="Assinar newsletter" onsubmit="handleNewsletterSubmit(event)">
+              <input type="email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail para newsletter" required
+                style="width: 100%; padding: 12px; margin-bottom: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); color: #fff; font-size: 0.9rem;" />
+              <button type="submit" class="btn btn-primary"
+                style="width: 100%; background: var(--brand-secondary); padding: 10px 16px;">
+                <span>Receber insights</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container footer-bottom">
-    <span>© 2025 Cognisum</span>
-    <span class="footer-muted">CNPJ 00.000.000/0001-00</span>
-  </div>
-</footer>
+    <div class="container footer-bottom">
+      <span>© 2025 Cognisum</span>
+      <span class="footer-muted">CNPJ 00.000.000/0001-00</span>
+    </div>
+  </footer>
 
   <!-- JS -->
   <script type="module" src="../js/main.js"></script>
   <script>
     // Sombra do header ao rolar
-    (function(){
+    (function () {
       const header = document.getElementById('header');
       const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 4);
-      onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
+      onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
     })();
 
     // Feedback simples (front-only) do formulário
-    (function(){
+    (function () {
       const form = document.getElementById('contact-form');
       const statusEl = document.getElementById('form-status');
-      if(!form) return;
+      if (!form) return;
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         if (form.querySelector('[name="_hp"]')?.value) return; // honeypot
@@ -308,14 +314,14 @@
     // Menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
-    
+
     if (menuToggle && mainNav) {
       menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         mainNav.classList.toggle('active');
         document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
       });
-      
+
       // Fecha menu ao clicar em um link
       const navLinks = mainNav.querySelectorAll('a');
       navLinks.forEach(link => {
@@ -325,19 +331,19 @@
           document.body.style.overflow = '';
         });
       });
-      
+
       // Fecha menu ao clicar fora
       document.addEventListener('click', (e) => {
-        if (mainNav.classList.contains('active') && 
-            !mainNav.contains(e.target) && 
-            !menuToggle.contains(e.target)) {
+        if (mainNav.classList.contains('active') &&
+          !mainNav.contains(e.target) &&
+          !menuToggle.contains(e.target)) {
           menuToggle.classList.remove('active');
           mainNav.classList.remove('active');
           document.body.style.overflow = '';
         }
       });
     }
-    
+
     // Header scroll effect
     const header = document.getElementById('header');
     if (header) {
@@ -351,6 +357,8 @@
     }
   </script>
 </body>
+
 </html>
 </body>
+
 </html>
