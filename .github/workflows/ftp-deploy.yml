@@ -20,6 +20,7 @@ jobs:
         password: ${{ secrets.PASS }}
         port: 21
         server-dir: /home/cognisum1/public_html/
+         passive: true 
         exclude: |
           **/.git*
           **/.git*/**
