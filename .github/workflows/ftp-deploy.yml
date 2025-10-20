@@ -15,12 +15,15 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
+          server: ${{ secrets.HOST }}          
+                                              
+          username: ${{ secrets.USER }}        
           password: ${{ secrets.PASS }}
           port: 21
-          server-dir: /home/cognisum1/public_html/
           passive: true
+          server-dir: /home/cognisum1/public_html/
+          local-dir: .                       
+          dangerous-clean-slate: true          
           exclude: |
             **/.git*
             **/.git*/**
