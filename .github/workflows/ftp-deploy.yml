@@ -20,8 +20,4 @@ jobs:
         password: ${{ secrets.PASS }}
         port: 21
         server-dir: /home/cognisum1/public_html/
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          **/.vscode/**
+        dangerous-clean-slate: true
