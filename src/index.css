@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #174A7E;
+  --color-brand-secondary: #00A6B2;
+  --color-brand-accent: #FFB200;
+  --color-surface-dark: #020817;
+  --color-surface-light: #F8FAFC;
+  --color-neutral-900: #1E1F24;
+  --color-neutral-700: #3A3D45;
+  --color-neutral-200: #E6E8EC;
+  --font-display: "Outfit", system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #F8FAFC;
+    --foreground: #1E1F24;
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased font-display;
+    background-color: var(--background);
+    color: var(--foreground);
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .glass-header {
+    @apply bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300;
+  }
+  .glass-header-dark {
+    @apply bg-[#020817]/70 border-white/10 text-white;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/50 shadow-[0_2px_12px_rgba(0,0,0,0.04)] rounded-2xl;
+  }
+  
+  .glow-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-hover:hover {
+    box-shadow: 0 0 20px rgba(0, 166, 178, 0.4);
+    transform: translateY(-2px);
+  }
+}
