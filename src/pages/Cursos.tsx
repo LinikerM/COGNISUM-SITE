@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { 
   BookOpen, 
   Clock, 
@@ -25,6 +25,7 @@ export function Cursos() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [isInteresseFormOpen, setIsInteresseFormOpen] = useState(false);
+  const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,6 +41,24 @@ export function Cursos() {
   const scrollToInscricao = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const totalHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      
+      // Mostrar se scrollou mais de 400px E não está perto do final (onde fica o formulário)
+      if (scrollY > 400 && scrollY + windowHeight < totalHeight - 900) {
+        setShowFloatingButton(true);
+      } else {
+        setShowFloatingButton(false);
+      }
+    };
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -536,6 +555,27 @@ export function Cursos() {
           <span>Power BI Avançado para o Setor Público</span>
         </div>
       </section>
+
+      {/* Card Flutuante de Inscrição */}
+      <button
+        onClick={scrollToInscricao}
+        className={`fixed bottom-6 left-6 z-40 bg-white border border-neutral-100 shadow-xl rounded-2xl p-4 flex items-center gap-3 cursor-pointer text-left transition-all duration-300 ease-out transform ${
+          showFloatingButton 
+            ? "translate-x-0 opacity-100 animate-float-pulse" 
+            : "-translate-x-20 opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+          <BookOpen className="w-5 h-5" />
+        </div>
+        <div>
+          <span className="block text-[10px] text-neutral-400 uppercase font-bold tracking-wider">Inscrições Abertas</span>
+          <span className="text-xs font-extrabold text-neutral-800 flex items-center gap-1">
+            Garanta sua Vaga
+            <ArrowRight className="w-3.5 h-3.5 text-brand-secondary" />
+          </span>
+        </div>
+      </button>
 
       {/* Modal de Formulário de Interesse */}
       <FormInteresseModal 

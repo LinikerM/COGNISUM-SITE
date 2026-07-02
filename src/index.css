@@ -46,4 +46,21 @@
     box-shadow: 0 0 20px rgba(0, 166, 178, 0.4);
     transform: translateY(-2px);
   }
+  
+  @keyframes float-pulse {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 10px 25px -5px rgba(0, 166, 178, 0.3), 0 8px 10px -6px rgba(0, 166, 178, 0.3);
+      border-color: rgba(0, 166, 178, 0.2);
+    }
+    50% {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 25px -5px rgba(0, 166, 178, 0.6), 0 10px 10px -5px rgba(0, 166, 178, 0.4);
+      border-color: rgba(0, 166, 178, 0.6);
+    }
+  }
+
+  .animate-float-pulse {
+    animation: float-pulse 2.5s infinite ease-in-out;
+  }
 }
