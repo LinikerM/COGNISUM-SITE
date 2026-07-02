@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, BarChart2 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { InteractiveDashboard } from './InteractiveDashboard';
 
 export function HeroSection() {
   const containerVariants = {
@@ -85,58 +86,12 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Lado Direito - Preview visual (estilo Landing Page) */}
-          <motion.div variants={itemVariants} className="relative group hidden lg:block">
+          {/* Lado Direito - Dashboard Interativo */}
+          <motion.div variants={itemVariants} className="relative group">
             {/* Glow do card (estilo Landing Page) */}
             <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
 
-            <div className="relative bg-gray-900/80 rounded-2xl border border-white/10 overflow-hidden shadow-2xl p-6">
-              {/* Mockup de Dashboard */}
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                <span className="ml-3 text-xs text-gray-500 font-mono">dashboard.cognisum.io</span>
-              </div>
-              <div className="space-y-4">
-                {/* Stats row */}
-                <div className="grid grid-cols-3 gap-3">
-                  <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-                    <div className="text-xs text-gray-500 mb-1">Emprego Formal</div>
-                    <div className="text-xl font-bold text-brand-secondary">+12.4%</div>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-                    <div className="text-xs text-gray-500 mb-1">Empresas Ativas</div>
-                    <div className="text-xl font-bold text-brand-accent">3.847</div>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-                    <div className="text-xs text-gray-500 mb-1">IDH Municipal</div>
-                    <div className="text-xl font-bold text-white">0.805</div>
-                  </div>
-                </div>
-                {/* Chart mockup */}
-                <div className="bg-white/5 rounded-xl p-4 border border-white/5 h-32 flex items-end justify-between gap-1">
-                  {[40, 55, 45, 70, 60, 80, 65, 90, 75, 95, 85, 100].map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-md bg-gradient-to-t from-brand-primary/60 to-brand-secondary/60"
-                      style={{ height: `${h}%` }}
-                    />
-                  ))}
-                </div>
-                {/* Bottom row */}
-                <div className="flex gap-3">
-                  <div className="flex-1 bg-white/5 rounded-xl p-3 border border-white/5">
-                    <div className="text-xs text-gray-500 mb-1">Atualizado em</div>
-                    <div className="text-sm font-medium text-white">Julho 2026</div>
-                  </div>
-                  <div className="flex-1 bg-white/5 rounded-xl p-3 border border-white/5">
-                    <div className="text-xs text-gray-500 mb-1">Municípios</div>
-                    <div className="text-sm font-medium text-white">645 cidades</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <InteractiveDashboard />
           </motion.div>
         </motion.div>
       </div>

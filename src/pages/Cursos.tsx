@@ -18,11 +18,13 @@ import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
 import { Card, CardContent } from "../components/ui/card";
 import { cursos } from "../data/cursos";
+import { FormInteresseModal } from "../components/FormInteresseModal";
 
 export function Cursos() {
   const mainCurso = cursos[0]; // Curso principal: Dashboards e Indicadores
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isInteresseFormOpen, setIsInteresseFormOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -149,14 +151,21 @@ export function Cursos() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <button 
                   onClick={scrollToInscricao}
-                  className="inline-flex items-center justify-center gap-2 bg-brand-primary hover:bg-[#0f3a66] text-white font-bold px-8 h-14 rounded-xl text-base shadow-md hover:shadow-lg transition-all"
+                  className="inline-flex items-center justify-center gap-2 bg-brand-primary hover:bg-[#0f3a66] text-white font-bold px-6 sm:px-8 h-14 rounded-xl text-base shadow-md hover:shadow-lg transition-all"
                 >
                   Inscreva-se Já
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button 
+                  onClick={() => setIsInteresseFormOpen(true)}
+                  className="inline-flex items-center justify-center gap-2 bg-brand-secondary hover:bg-[#008d96] text-white font-bold px-6 sm:px-8 h-14 rounded-xl text-base shadow-md hover:shadow-lg transition-all"
+                >
+                  Responda aqui o formulário de interesse
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button 
                   onClick={() => document.getElementById("conteudo")?.scrollIntoView({ behavior: "smooth" })}
-                  className="inline-flex items-center justify-center gap-2 bg-white text-neutral-700 border border-neutral-200 hover:bg-neutral-50 px-8 h-14 rounded-xl text-base font-bold transition-all shadow-sm"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-neutral-700 border border-neutral-200 hover:bg-neutral-50 px-6 sm:px-8 h-14 rounded-xl text-base font-bold transition-all shadow-sm"
                 >
                   Ver Programação
                 </button>
@@ -346,6 +355,26 @@ export function Cursos() {
         </div>
       </section>
 
+      {/* Banner de Pesquisa de Interesse */}
+      <section className="py-8 bg-neutral-50/50 border-y border-neutral-200/50 relative z-10">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="p-8 rounded-3xl border border-brand-secondary/20 bg-brand-secondary/5 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 text-left">
+            <div className="space-y-1">
+              <span className="text-[10px] text-brand-secondary font-bold uppercase tracking-widest block">Futuras Capacitações</span>
+              <h3 className="text-lg font-bold text-neutral-900">Tem interesse em outros temas ou formatos?</h3>
+              <p className="text-xs text-neutral-600">Ajude-nos a criar os melhores treinamentos respondendo à nossa pesquisa rápida.</p>
+            </div>
+            <button
+              onClick={() => setIsInteresseFormOpen(true)}
+              className="inline-flex items-center justify-center gap-2 bg-brand-secondary hover:bg-[#008d96] text-white font-bold px-6 h-12 rounded-xl text-xs shadow-md hover:shadow-lg transition-all shrink-0 cursor-pointer"
+            >
+              Responda aqui o formulário de interesse
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* 4. Formulário de Inscrição (Visual Limpo e Dividido) */}
       <section ref={formRef} id="inscricao" className="py-20 bg-white border-t border-neutral-200/80 relative z-10">
         <div className="max-w-2xl mx-auto px-6">
@@ -507,6 +536,12 @@ export function Cursos() {
           <span>Power BI Avançado para o Setor Público</span>
         </div>
       </section>
+
+      {/* Modal de Formulário de Interesse */}
+      <FormInteresseModal 
+        isOpen={isInteresseFormOpen} 
+        onClose={() => setIsInteresseFormOpen(false)} 
+      />
       
     </div>
   );
